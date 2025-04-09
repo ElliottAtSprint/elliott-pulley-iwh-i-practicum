@@ -25,7 +25,7 @@ app.get('/', async (req, res) => {
 
     const response = await axios.get(rivalsHeroes, { headers });
     const data = response.data.results;
-    res.render('rivalsHeroes', { title: 'Rivals Heroes', data });
+    res.render('homepage', { title: 'Custom Object Table', data });
 });
 
 // TODO: ROUTE 2 - Create a new app.get route for the form to create or update new custom object data. Send this data along in the next route.
@@ -39,9 +39,6 @@ app.get('/update-cobj', async (req, res) => {
 
 // * Code for Route 3 goes here
 app.post('/update-cobj', async (req, res) => {
-    console.log('In update-cobj post');
-    console.log(req.body);
-
     const newHero = {
         properties: {
             name: req.body.name,
@@ -62,7 +59,6 @@ app.post('/update-cobj', async (req, res) => {
     };
     try {
         const response = await axios.post(createHero, newHero, { headers });
-        console.log(response.data);
         res.redirect('/');
     } catch (error) {
         console.error(error);
