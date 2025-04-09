@@ -14,10 +14,22 @@ a {
     margin: 1rem;
 }
 
-table, th, td {
+table {
+    margin: 2rem auto;
+    padding: 1rem;
+    border: solid 1px lightgrey;
+    border-radius: 15px;
+    box-shadow: 3px 2px 6px lightgrey;
+}
+
+th, td {
     margin: 1rem;
     padding: 1rem;
     border: solid 1px lightgrey;
+}
+
+th {
+    background-color: lightgrey;
 }
 
 .cards {
