@@ -23,9 +23,14 @@ app.get('/', async (req, res) => {
         'Content-Type': 'application/json'
     };
 
-    const response = await axios.get(rivalsHeroes, { headers });
-    const data = response.data.results;
-    res.render('homepage', { title: 'Custom Object Table', data });
+    try {
+
+        const response = await axios.get(rivalsHeroes, { headers });
+        const data = response.data.results;
+        res.render('homepage', { title: 'Custom Object Table', data });
+    } catch (error) {
+        console.error('Error fetching rivals heroes: ' + error);
+    }
 });
 
 // TODO: ROUTE 2 - Create a new app.get route for the form to create or update new custom object data. Send this data along in the next route.
@@ -61,7 +66,7 @@ app.post('/update-cobj', async (req, res) => {
         const response = await axios.post(createHero, newHero, { headers });
         res.redirect('/');
     } catch (error) {
-        console.error(error);
+        console.error('Error adding new rivals hero: ' + error);
     }
 });
 
