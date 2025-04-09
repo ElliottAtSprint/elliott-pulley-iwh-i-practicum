@@ -16,7 +16,7 @@ const PRIVATE_APP_ACCESS = process.env.PRIVATE_APP_ACCESS;
 // * Code for Route 1 goes here
 app.get('/', async (req, res) => {
 
-    // I need to use the objectTypeId instead of objectType as the api doesnt recognise rival_heroes as a valid objectType
+    // I need to use the objectTypeId instead of objectType as the api doesn't recognise rivals_heroes as a valid objectType
     const rivalsHeroes = 'https://api.hubapi.com/crm/v3/objects/2-141289590?properties=name,class,damage,firing_rate,dps,health,ultimate';
     const headers = {
         Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
@@ -56,7 +56,7 @@ app.post('/update-cobj', async (req, res) => {
         }
     };
     
-    // I need to use the objectTypeId instead of objectType as the api doesnt recognise rivals_heroes as a valid objectType
+    // I need to use the objectTypeId instead of objectType as the api doesn't recognise rivals_heroes as a valid objectType
     const createHero = 'https://api.hubapi.com/crm/v3/objects/2-141289590';
     const headers = {
         Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
