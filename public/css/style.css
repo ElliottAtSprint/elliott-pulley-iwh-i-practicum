@@ -36,18 +36,6 @@ table, th, td {
     box-shadow: 3px 2px 6px lightgrey;
 }
 
-.Vanguard {
-    background-color:rgba(255,255,0,0.5);
-}
-
-.Duelist {
-    background-color:rgba(255, 0, 0, 0.5);
-}
-
-.Strategist {
-    background-color: rgba(0, 128, 0, 0.5);
-}
-
 .card__class {
     font-size: 1rem;
 }
