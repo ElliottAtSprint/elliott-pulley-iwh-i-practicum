@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+    head
+        title= `${title}`
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1= `${title}`
+        a(href="/update-cobj") Add to this table
+        table
+            thead
+                tr
+                    th Name
+                    th Class
+                    th Damage
+                    th Firing Rate
+                    th DPS
+                    th Health
+                    th Ultimate
+            tbody
+                each hero in data
+                    tr
+                        td #{hero.properties.name}
+                        td #{hero.properties.class}
+                        td #{hero.properties.damage}
+                        td #{hero.properties.firing_rate}
+                        td #{hero.properties.dps}
+                        td #{hero.properties.health}
+                        td #{hero.properties.ultimate}

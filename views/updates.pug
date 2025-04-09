@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+    head
+        title= `${title}`
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1= `${title}`
+        a(href="/") Return to the homepage
+        .form-wrapper
+            form(method="POST")
+                label(for="name") Name
+                input(type="text" name="name" required)
+                label(for="class") Class
+                select#options(name="class" required)
+                    option(value="" disabled selected) --- Select Class ---
+                    option(value="Vanguard") Vanguard
+                    option(value="Duelist") Duelist
+                    option(value="Strategist") Strategist
+                label(for="damage") Damage
+                input(type="number" name="damage" required)                
+                label(for="firing_rate") Firing Rate
+                input(type="number" name="firing_rate" required)                
+                label(for="health") Health
+                input(type="number" name="health" required)
+                label(for="ultimate") Ultimate
+                input(type="text" name="ultimate" required)
+                input(type="submit" value="Submit")
