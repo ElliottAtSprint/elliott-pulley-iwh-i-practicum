@@ -10,6 +10,10 @@ h1 {
     margin: 1rem;
 }
 
+a {
+    margin: 1rem;
+}
+
 .cards {
     display: flex;
     align-items: center;
@@ -26,7 +30,19 @@ h1 {
     box-shadow: 3px 2px 6px lightgrey;
 }
 
-.card__email {
+.Vanguard {
+    background-color:rgba(255,255,0,0.5);
+}
+
+.Duelist {
+    background-color:rgba(255, 0, 0, 0.5);
+}
+
+.Strategist {
+    background-color: rgba(0, 128, 0, 0.5);
+}
+
+.card__class {
     font-size: 1rem;
 }
 
@@ -47,6 +63,14 @@ label, input {
 }
 
 input[type="text"] {
+    padding: .25rem;
+}
+
+input[type="number"] {
+    padding: .25rem;
+}
+
+select {
     padding: .25rem;
 }
 
